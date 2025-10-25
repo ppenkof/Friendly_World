@@ -126,14 +126,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  - [x] Add get dashboard action with static animals
  - [x] Get all animals service
  - [x] Show dynamic animals  
-###  home page animals
+### Home page animals
  - [x] Add get latest animals in animal service
  - [x] Show dynamic lastest animals on home 
-###  nimal details
- - [ ] Fix details link in animals page
- - [ ] Fix details link in home page
- - [ ] Show static details page
- - [ ] Add getOne method in animal service
+###  Animal details
+ - [x] Fix details link in animals page
+ - [x] Fix details link in home page
+ - [x] Show static details page
+ - [x] Add getOne method in animal service
  - [ ] Show dynamic details page (without author and followers)
  - [ ] Show dynamic author
  - [ ] Hide buttons if not logged
@@ -146,12 +146,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
    - [ ] Fix follow link
  - [ ] Show dynamic follwers
  - [ ] Show follow button or already following buttons conditionally 
-###  elete animal
+### Delete animal
  - [ ] Fix navigation link in details
  - [ ] Add delete action
  - [ ] Add delete method in animal service
  
-###  dit animal
+### Edit animal
  - [ ] Fix navigation link in details
  - [ ] Add get edit action
  - [ ] Show empty edit page
@@ -159,9 +159,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  - [ ] Add post edit action
  - [ ] Add edit method in animal service
  - [ ] Add error handling 
-###  rofile
+### Donations
  - [ ] Fix navigation link
- - [ ] Show static profile page
+ - [ ] Show static donations page
  - [ ] Show dynamic user information
  - [ ] Show created animals
  - [ ] Show followed animals

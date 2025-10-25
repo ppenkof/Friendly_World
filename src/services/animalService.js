@@ -21,3 +21,4 @@ export function create(animalData, userId) {
         owner: userId
     });
 }
+

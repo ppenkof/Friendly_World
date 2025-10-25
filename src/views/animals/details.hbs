@@ -4,7 +4,7 @@
         <div id="details-wrapper">
             <p id="details-title">Name: Show</p>
             <div id="img-wrapper">
-                <img src="./static/images/animal1.jpg" />
+                <img src="/static/images/animal1.jpg" />
             </div>
             <div id="info-wrapper">
                 <table>
@@ -36,9 +36,9 @@
 
             <!--Edit and Delete are only for creator-->
             <div id="action-buttons">
-                <a href="#" id="edit-btn">Edit</a>
-                <a href="#" id="delete-btn">Delete</a>
-                <a href="#" id="donation-btn">Donation</a>
+                <a href="/animals/{{id}}/edit" id="edit-btn">Edit</a>
+                <a href="/animals/{{id}}/delete" id="delete-btn">Delete</a>
+                <a href="/animals/{{id}}/donation" id="donation-btn">Donation</a>
                 <p id="already-donated">You already donated!</p>
             </div>
         </div>
