@@ -6,10 +6,10 @@ import { animalService } from "../services/index.js";
 
 const animalController = Router();
 
-animalController.get('/', async (req, res) => {
+animalController.get('/dashboard', async (req, res) => {
     const animals = await animalService.getAll();
-console.log(animals);
-    res.render('animals', { animals });
+
+    res.render('animals/dashboard', { animals });
 });
 
 animalController.get('/create', (req, res) => {

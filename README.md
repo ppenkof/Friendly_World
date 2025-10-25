@@ -120,12 +120,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  - [x] Add owner on animal creation
  - [x] Add error handling
 
-### Animal Catalog Page
- - [ ] Fix navigation link
- - [ ] Add catalog view
- - [ ] Add get catalog action with static animals
- - [ ] Get all animals service
- - [ ] Show dynamic animals  
+### Animal Dashboard Page
+ - [x] Fix navigation link
+ - [x] Add dashboard view
+ - [x] Add get dashboard action with static animals
+ - [x] Get all animals service
+ - [x] Show dynamic animals  
 ###  home page animals
  - [x] Add get latest animals in animal service
  - [x] Show dynamic lastest animals on home 
