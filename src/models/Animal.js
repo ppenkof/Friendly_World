@@ -2,37 +2,37 @@ import {Schema, model, Types } from 'mongoose';
 
 const animalSchema = new Schema({
     name: {
-        type: string,
+        type: String,
         required: [true, 'Animal name is required!'],
     },
 
     years:{
-        type: number,
+        type: Number,
         required: [true, 'Animal age is required!'],
     },
 
     kind: {
-        type: string,
+        type: String,
         required: [true, 'Animal kind is required!'],
     },
 
     imageUrl: {
-        type: string,
+        type: String,
         required: [true, 'Animal image is required!'],
     },
 
     need: {
-        type: string,
+        type: String,
         required: [true, 'Animal need is required!'],
     },
 
     location: {
-        type: string,
+        type: String,
         required: [true, 'Animal location is required!'],
     },
 
     description:{
-        type: string,
+        type: String,
         required: [true, 'Animal description is required!'],
     },
 

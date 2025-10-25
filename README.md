@@ -114,11 +114,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  - [x] Add animals folder in views
  - [x] Add create animal view
  - [x] Add animal model
- - [ ] Modify create animal form
- - [ ] Create animal post action
- - [ ] Create animal service with create method
- - [ ] Add owner on animal creation
- - [ ] Add error handling
+ - [x] Modify create animal form
+ - [x] Create animal post action
+ - [x] Create animal service with create method
+ - [x] Add owner on animal creation
+ - [x] Add error handling
 
 ### Animal Catalog Page
  - [ ] Fix navigation link
