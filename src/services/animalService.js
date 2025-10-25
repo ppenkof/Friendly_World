@@ -22,3 +22,11 @@ export function create(animalData, userId) {
     });
 }
 
+export function edit(animalId, animalData){
+    const found = Animal.findByIdAndUpdate(animalId, animalData, {runValidators: true});
+    return found;
+}
+
+export function getAllByOwner(ownerId){
+    return Animal.find({owner: ownerId});
+}

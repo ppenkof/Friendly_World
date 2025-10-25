@@ -37,8 +37,6 @@ animalController.post('/create', isAuth, async (req, res) => {
 animalController.get('/:animalId/details', async (req, res) => {
     const animalId = req.params.animalId;
     const userId = req.user._id;
-    // console.log(userId);
-    // console.log(req.user);
 
     const animal = await animalService.getOne(animalId);
     const isOwner = animal.owner.equals(userId);
@@ -48,7 +46,46 @@ animalController.get('/:animalId/details', async (req, res) => {
 
     res.render('animals/details', { animal, isOwner, donations, isDonating });
 });
+//Edit
+animalController.get('/:animalId/edit', isAuth, async (req, res) => {
+    const animalId = req.params.animalId;
+    const animal = await animalService.getOne(animalId);
+console.log(animalId, animal);
+    if(!animal.owner.equals(req.user._id)){
+        throw {
+            message:'Cannot edit animal that you are not owner',
+            statusCode:401
+        };
+    }
+    
+    res.render('animals/edit', { animal });
+});
 
+animalController.post('/:animalId/edit', isAuth, async (req, res) => {
+    const animalId = req.params.animalId;
+    const animalData = req.body;
+    const userId = req.user._id;
+    const animal = await animalService.getOne(animalId);
 
+    if(!animal.owner.equals(userId)){
+        throw {
+            message:'Cannot edit animal that you are not owner',
+            statusCode:401
+        };
+    }
+
+    try {
+        await animalService.edit(animalId, animalData);
+        res.redirect(`/animals/${animalId}/details`);
+    } catch (error) {
+        res.render('animals/edit', {
+        animal: animalData,
+        error: getErrorMessage(error),
+        });
+    }
+   
+});
+
+//delete
 
 export default animalController;

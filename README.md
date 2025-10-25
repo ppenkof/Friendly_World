@@ -151,13 +151,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  - [ ] Add delete method in animal service
  
 ### Edit animal
- - [ ] Fix navigation link in details
- - [ ] Add get edit action
- - [ ] Show empty edit page
- - [ ] Populate edit form with animal data
- - [ ] Add post edit action
- - [ ] Add edit method in animal service
- - [ ] Add error handling 
+ - [x] Fix navigation link in details
+ - [x] Add get edit action
+ - [x] Show empty edit page
+ - [x] Populate edit form with animal data
+ - [x] Add post edit action
+ - [x] Add edit method in animal service
+ - [x] Add error handling 
 ### Donations
  - [ ] Fix navigation link
  - [ ] Show static donations page
