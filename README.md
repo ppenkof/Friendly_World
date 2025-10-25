@@ -126,9 +126,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  - [ ] Add get catalog action with static animals
  - [ ] Get all animals service
  - [ ] Show dynamic animals  
-###  ome page animals
- - [ ] Add get latest animals in animal service
- - [ ] Show dynamic lastest animals on home 
+###  home page animals
+ - [x] Add get latest animals in animal service
+ - [x] Show dynamic lastest animals on home 
 ###  nimal details
  - [ ] Fix details link in animals page
  - [ ] Fix details link in home page
