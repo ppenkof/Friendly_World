@@ -1,6 +1,5 @@
 # Friendly_World
 Friendly World is JS backend application(MPA) based on express.js
-# SoftUni JS Back-End Exam Preparation Cheat Sheet
 
 ### 1. Initialize Project 
  - [x] Initialize npm project `npm init -y`
