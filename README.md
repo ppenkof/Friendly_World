@@ -134,18 +134,17 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  - [x] Fix details link in home page
  - [x] Show static details page
  - [x] Add getOne method in animal service
- - [ ] Show dynamic details page (without author and followers)
- - [ ] Show dynamic author
- - [ ] Hide buttons if not logged
- - [ ] Show edit and delete button if author
- - [ ] Show follow and already following buttons if logged
- - [ ] Implement follow functionallity
-   - [ ] Add followers in animal relation
-   - [ ] Add follow action
-   - [ ] Add follow service method
-   - [ ] Fix follow link
- - [ ] Show dynamic follwers
- - [ ] Show follow button or already following buttons conditionally 
+ - [x] Show dynamic details page (without author and donationers)
+ - [x] Hide buttons if not logged
+ - [x] Show edit and delete button if author
+ - [x] Show donation and already donating buttons if logged
+ - [ ] Implement donation functionallity
+   - [ ] Add donationers in animal relation
+   - [ ] Add donation action
+   - [ ] Add donation service method
+   - [ ] Fix donation link
+ - [ ] Show dynamic donations
+ - [ ] Show donations button or already donating buttons conditionally 
 ### Delete animal
  - [ ] Fix navigation link in details
  - [ ] Add delete action
@@ -164,7 +163,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  - [ ] Show static donations page
  - [ ] Show dynamic user information
  - [ ] Show created animals
- - [ ] Show followed animals
+ - [ ] Show donated animals
 
 ## Validation and error handling
 
