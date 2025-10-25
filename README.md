@@ -102,10 +102,69 @@ Friendly World is JS backend application(MPA) based on express.js
  - [x] BONUS: Check repeatPassword in model
  - [x] Error handling and data persistance on login 
 
-### Bonus
- - [x] Export helpers into separate module
- - [x] Add env variable for debuging
- - [x] Add global error handler
- - [ ] Add bundler
- - [ ] Use async jwt
- - [ ] Refresh token
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+## Solve FriendlyWorld
+
+### Create animal Page
+ - [x] Fix create animal navigation link
+ - [x] Add animal controller
+ - [x] Add controller to routes
+ - [x] Add create action with render
+ - [x] Add animals folder in views
+ - [x] Add create animal view
+ - [x] Add animal model
+ - [ ] Modify create animal form
+ - [ ] Create animal post action
+ - [ ] Create animal service with create method
+ - [ ] Add owner on animal creation
+ - [ ] Add error handling
+
+### Animal Catalog Page
+ - [ ] Fix navigation link
+ - [ ] Add catalog view
+ - [ ] Add get catalog action with static animals
+ - [ ] Get all animals service
+ - [ ] Show dynamic animals  
+###  ome page animals
+ - [ ] Add get latest animals in animal service
+ - [ ] Show dynamic lastest animals on home 
+###  nimal details
+ - [ ] Fix details link in animals page
+ - [ ] Fix details link in home page
+ - [ ] Show static details page
+ - [ ] Add getOne method in animal service
+ - [ ] Show dynamic details page (without author and followers)
+ - [ ] Show dynamic author
+ - [ ] Hide buttons if not logged
+ - [ ] Show edit and delete button if author
+ - [ ] Show follow and already following buttons if logged
+ - [ ] Implement follow functionallity
+   - [ ] Add followers in animal relation
+   - [ ] Add follow action
+   - [ ] Add follow service method
+   - [ ] Fix follow link
+ - [ ] Show dynamic follwers
+ - [ ] Show follow button or already following buttons conditionally 
+###  elete animal
+ - [ ] Fix navigation link in details
+ - [ ] Add delete action
+ - [ ] Add delete method in animal service
+ 
+###  dit animal
+ - [ ] Fix navigation link in details
+ - [ ] Add get edit action
+ - [ ] Show empty edit page
+ - [ ] Populate edit form with animal data
+ - [ ] Add post edit action
+ - [ ] Add edit method in animal service
+ - [ ] Add error handling 
+###  rofile
+ - [ ] Fix navigation link
+ - [ ] Show static profile page
+ - [ ] Show dynamic user information
+ - [ ] Show created animals
+ - [ ] Show followed animals
+
+## Validation and error handling
+
