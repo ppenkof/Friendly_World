@@ -35,23 +35,23 @@ animalController.post('/create', isAuth, async (req, res) => {
     }
 });
 //Get Details
-animalController.get('/:animalId/details', async (req, res) => {
+animalController.get('/:animalId/details', isAuth, async (req, res) => {
     const animalId = req.params.animalId;
     const userId = req.user._id;
 
     const animal = await animalService.getOne(animalId);
     const isOwner = animal.owner.equals(userId);
-    // console.log(isOwner);
+   
     const donations = animal.donations.map(d=>d.email).join(', ');
     const isDonating = animal.donations.some(d=>d.equals(userId));
 
     res.render('animals/details', { animal, isOwner, donations, isDonating });
 });
-//Edit
+//Edit get
 animalController.get('/:animalId/edit', isAuth, async (req, res) => {
     const animalId = req.params.animalId;
     const animal = await animalService.getOne(animalId);
-console.log(animalId, animal);
+
     if(!animal.owner.equals(req.user._id)){
         throw {
             message:'Cannot edit animal that you are not owner',
@@ -61,7 +61,7 @@ console.log(animalId, animal);
     
     res.render('animals/edit', { animal });
 });
-
+//Edit post
 animalController.post('/:animalId/edit', isAuth, async (req, res) => {
     const animalId = req.params.animalId;
     const animalData = req.body;
@@ -91,9 +91,27 @@ animalController.post('/:animalId/edit', isAuth, async (req, res) => {
 animalController.get('/:animalId/delete', isAuth, async (req, res) => {
     const animalId = req.params.animalId;
     const userId = req.user._id;
-console.log(animalId, userId);
+
     await animalService.remove(animalId, userId);
     res.redirect('/animals/dashboard');
+});
+
+//donate
+animalController.get('/:animalId/donations', isAuth, async (req, res) => {
+    const animalId = req.params.animalId;
+    const userId = req.user._id;
+
+    await animalService.donate(animalId, userId);
+    res.redirect(`/animals/${animalId}/details`);
+});
+
+//search
+animalController.get('/search', isAuth, async (req, res) => {
+    const filter = req.query;
+    const animals = await animalService.search(filter);
+    console.log(filter);
+
+    res.render('search', { animals, filter, pageTitle: 'Search animals' });
 });
 
 export default animalController;

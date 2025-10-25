@@ -29,7 +29,7 @@ export function edit(animalId, animalData){
 
 export async function remove(animalId, userId) {
     const animal = await Animal.findById(animalId);
-console.log(animalId, animal);
+
     if(!animal.owner.equals(userId)){
         throw new Error('You are not the owner of this animal post!');
     }
@@ -37,6 +37,30 @@ console.log(animalId, animal);
     return Animal.findByIdAndDelete(animalId);
 }
 
-export function getAllByOwner(ownerId){
-    return Animal.find({owner: ownerId});
+export async function donate(animalId, userId) {
+    // const animal = await animal.findById(animalId);
+    // animal.donationsers.push(userId);
+
+    // return animal.save();
+
+    //return animal.findByIdAndUpdate(animalId, {$push: {donations: userId}}); //This is not by requirements
+    const animal = await Animal.findById(animalId);
+
+    if(animal.owner.equals(userId)){
+        throw new Error('Owner cannot donate animal!');
+    }
+
+    animal.donations.push(userId);
+    return animal.save(); 
+}
+
+export  function search(filter) {
+    const query = {};
+
+    if(filter.location){
+        query.location = {$regex: filter.location, $options: 'i'};
+    }
+
+    return Animal.find(query);//.select({name: true, need: true, imageUrl: true, location:true});
+
 }
