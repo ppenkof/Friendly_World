@@ -27,6 +27,16 @@ export function edit(animalId, animalData){
     return found;
 }
 
+export async function remove(animalId, userId) {
+    const animal = await Animal.findById(animalId);
+console.log(animalId, animal);
+    if(!animal.owner.equals(userId)){
+        throw new Error('You are not the owner of this animal post!');
+    }
+    
+    return Animal.findByIdAndDelete(animalId);
+}
+
 export function getAllByOwner(ownerId){
     return Animal.find({owner: ownerId});
 }

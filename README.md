@@ -146,9 +146,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  - [ ] Show dynamic donations
  - [ ] Show donations button or already donating buttons conditionally 
 ### Delete animal
- - [ ] Fix navigation link in details
- - [ ] Add delete action
- - [ ] Add delete method in animal service
+ - [x] Fix navigation link in details
+ - [x] Add delete action
+ - [x] Add delete method in animal service
  
 ### Edit animal
  - [x] Fix navigation link in details

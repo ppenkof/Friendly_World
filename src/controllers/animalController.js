@@ -6,6 +6,7 @@ import { animalService } from "../services/index.js";
 
 const animalController = Router();
 
+//dashboard
 animalController.get('/dashboard', async (req, res) => {
     const animals = await animalService.getAll();
 
@@ -15,7 +16,7 @@ animalController.get('/dashboard', async (req, res) => {
 animalController.get('/create', (req, res) => {
     res.render('animals/create');
 });
-
+//Create
 animalController.post('/create', isAuth, async (req, res) => {
     const animalData = req.body;
     const userId = req.user._id;
@@ -33,7 +34,7 @@ animalController.post('/create', isAuth, async (req, res) => {
 
     }
 });
-
+//Get Details
 animalController.get('/:animalId/details', async (req, res) => {
     const animalId = req.params.animalId;
     const userId = req.user._id;
@@ -87,5 +88,12 @@ animalController.post('/:animalId/edit', isAuth, async (req, res) => {
 });
 
 //delete
+animalController.get('/:animalId/delete', isAuth, async (req, res) => {
+    const animalId = req.params.animalId;
+    const userId = req.user._id;
+console.log(animalId, userId);
+    await animalService.remove(animalId, userId);
+    res.redirect('/animals/dashboard');
+});
 
 export default animalController;
